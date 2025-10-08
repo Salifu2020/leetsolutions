@@ -1,0 +1,12 @@
+from collections import Counter
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        counter = Counter(nums)
+
+        for num in nums:
+            if counter[num] == 2:
+                continue
+            return num
+
+        return -1
+        
